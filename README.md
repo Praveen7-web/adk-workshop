@@ -128,16 +128,3 @@ Create a preparation plan for me.
 
 ---
 
-## 📦 Packaging for Certification Submission
-
-Generate clean zip archives with secrets and build caches stripped:
-
-```powershell
-mkdir submission
-Copy-Item personal_assistant submission/personal_assistant -Recurse
-Copy-Item smartstudy submission/smartstudy -Recurse
-Remove-Item submission/*/.env -Force -ErrorAction SilentlyContinue
-Get-ChildItem submission -Recurse -Directory -Force | Where-Object { $_.Name -in '__pycache__','.adk' } | Remove-Item -Recurse -Force
-Compress-Archive -Path submission/personal_assistant -DestinationPath submission/task1_personal_assistant.zip -Force
-Compress-Archive -Path submission/smartstudy -DestinationPath submission/task2_smartstudy.zip -Force
-```
