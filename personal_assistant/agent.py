@@ -5,7 +5,7 @@ import re
 from google.adk.agents import Agent
 from google.adk.tools.google_search_tool import GoogleSearchTool
 
-MODEL = 'gemini-3.7-flash'
+MODEL = 'gemini-2.5-flash-lite'
 
 # ---------- Tool 2: Calculator (safe, no eval) ----------
 _BIN_OPS = {

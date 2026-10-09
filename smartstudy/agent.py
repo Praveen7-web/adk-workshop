@@ -5,7 +5,7 @@ from google.adk.events import Event
 from google.adk.tools.tool_context import ToolContext
 from google.genai import types
 
-MODEL = 'gemini-3.7-flash'
+MODEL = 'gemini-2.5-flash-lite'
 MODEL_LITE = 'gemini-flash-lite-latest'  # Used across parallel analysts to avoid free-tier 5 RPM limit
 
 # 1. Coordinator ---------------------------------------------------------
